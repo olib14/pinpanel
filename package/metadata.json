@@ -1,0 +1,23 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Name": "Pin Panel",
+        "Id": "org.kde.olib.pinpanel",
+        "Description": "Pin and unpin a Plasma panel",
+        "Category": "Utilities",
+        "Icon": "pin",
+        "Authors": [
+            {
+                "Email": "olib141@outlook.com",
+                "Name": "Oliver Beard"
+            }
+        ],
+        "Version": "0.0.0",
+        "License": "MIT",
+        "Website": "https://invent.kde.org/olib/pinpanel",
+        "BugReportUrl": "https://invent.kde.org/olib/pinpanel/-/issues"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-API": "declarativeappletscript",
+    "X-Plasma-MainScript": "ui/main.qml"
+}

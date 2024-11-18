@@ -1,0 +1,39 @@
+<!--
+    SPDX-FileCopyrightText: 2024 Oliver Beard <olib141@outlook.com>
+    SPDX-License-Identifier: MIT
+-->
+
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+    <kcfgfile name=""/>
+
+    <group name="General">
+        <entry name="pinnedVisibilityMode" type="Enum">
+            <choices>
+                <choice name="NormalPanel"/>
+                <choice name="AutoHide"/>
+                <choice name="DodgeWindows"/>
+                <choice name="WindowsGoBelow"/>
+            </choices>
+            <default>0</default>
+        </entry>
+        <entry name="unpinnedVisibilityMode" type="Enum">
+            <choices>
+                <choice name="NormalPanel"/>
+                <choice name="AutoHide"/>
+                <choice name="DodgeWindows"/>
+                <choice name="WindowsGoBelow"/>
+            </choices>
+            <default>1</default>
+        </entry>
+        <entry name="compactDelegate" type="Enum">
+            <choices>
+                <choice name="ToolButton"/>
+                <choice name="Icon"/>
+            </choices>
+            <default>0</default>
+        </entry>
+    </group>
+</kcfg>
