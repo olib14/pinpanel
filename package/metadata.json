@@ -12,7 +12,7 @@
                 "Name": "Oliver Beard"
             }
         ],
-        "Version": "0.0.0",
+        "Version": "0.1.0",
         "License": "MIT",
         "Website": "https://invent.kde.org/olib/pinpanel",
         "BugReportUrl": "https://invent.kde.org/olib/pinpanel/-/issues"
