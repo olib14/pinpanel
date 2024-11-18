@@ -15,6 +15,7 @@ PlasmoidItem {
     property QtObject panelView: null
 
     property bool ready: (panelView != null && panelView.source.toString().endsWith("Panel.qml"))
+    property bool wasPinned: false
     property bool pinned: {
         if (!ready) {
             return false;
@@ -37,14 +38,27 @@ PlasmoidItem {
         }
     }
 
+    function setPinned(pinned: bool) : void {
+        panelView.visibilityMode = pinned ? Plasmoid.configuration.pinnedVisibilityMode
+                                          : Plasmoid.configuration.unpinnedVisibilityMode;
+    }
+
     function togglePinned() : void {
-        panelView.visibilityMode = pinned ? Plasmoid.configuration.unpinnedVisibilityMode
-                                          : Plasmoid.configuration.pinnedVisibilityMode;
+        setPinned(!pinned);
+        root.wasPinned = root.pinned;
+    }
+
+    Connections {
+        target: Plasmoid.configuration
+
+        function onPinnedVisibilityModeChanged()   : void { setPinned(wasPinned); }
+        function onUnpinnedVisibilityModeChanged() : void { setPinned(wasPinned); }
     }
 
     Item {
         onWindowChanged: (window) => {
             root.panelView = window;
+            root.wasPinned = root.pinned;
         }
     }
 
@@ -58,10 +72,10 @@ PlasmoidItem {
         }
 
         switch (Plasmoid.configuration.compactDelegate) {
-            case Enums.CompactDelegates.ToolButton:
+            case Enum.CompactDelegates.ToolButton:
             default:
                 return "Pin";
-            case Enums.CompactDelegates.Icon:
+            case Enum.CompactDelegates.Icon:
                 return pinned ? "Unpin" : "Pin";
         }
     }

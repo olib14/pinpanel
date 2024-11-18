@@ -18,8 +18,8 @@ Loader {
 
     readonly property bool isVertical: (Plasmoid.formFactor == PlasmaCore.Types.Vertical)
 
-    Layout.preferredWidth:  isVertical ? height : width
-    Layout.preferredHeight: isVertical ? width  : height
+    Layout.preferredWidth:  isVertical ? width : height
+    Layout.preferredHeight: isVertical ? width : height
 
     sourceComponent: {
         if (!root.ready) {
