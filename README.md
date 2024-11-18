@@ -8,7 +8,7 @@ Pin/unpin a Plasma panel.
 
 ## Usage
 
-Add the applet to a panel. To configure visibilty modes for the pinned/unpinned state, configure the applet. To better tune sizing, consider the usage of a margins separator.
+Add the applet to a panel. To configure visibility modes for the pinned/unpinned state, configure the applet. To better tune sizing, consider the usage of a margins separator.
 
 ## Installation
 
