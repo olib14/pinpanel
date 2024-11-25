@@ -1,6 +1,6 @@
 # Pin Panel
 
-Pin/unpin a Plasma panel.
+Pin/unpin a Plasma panel
 
 ![Plasmoid on the panel](promo/banner1.png)
 
