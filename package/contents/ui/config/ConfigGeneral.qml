@@ -24,7 +24,7 @@ KCM.SimpleKCM {
     property int cfg_unpinnedVisibilityModeDefault
     property int cfg_compactDelegateDefault
 
-    readonly property list<string> visibilityModes: ["Always Visible", "Auto Hide", "Dodge Windows", "Windows Go Below"]
+    readonly property list<string> visibilityModes: ["Always visible", "Auto hide", "Dodge windows", "Windows go below"]
 
     Kirigami.FormLayout {
 
