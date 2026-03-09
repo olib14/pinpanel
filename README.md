@@ -12,11 +12,11 @@ Add the applet to a panel. To configure visibility modes for the pinned/unpinned
 
 ## Installation
 
-It is recommended to install the applet via "Get New…" or Discover, which obtain the applet [from the KDE Store](about:blank). Manual installation is only required for development and testing.
+It is recommended to install the applet via "Get New…" or Discover, which obtain the applet from the [KDE Store](about:blank). Manual installation is only required for development and testing.
 
 There is no compiled content, so the plasmoid can be trivially installed by copying files.
 
-It is necesary to restart Plasma after installing:
+It is necessary to restart Plasma after installing:
 
 `systemctl restart --user plasma-plasmashell.service`
 
